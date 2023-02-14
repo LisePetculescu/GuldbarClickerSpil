@@ -30,6 +30,9 @@ grid-area: 1/1;
 background-image: url(images/bar.png);
         /*--licens to pic <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> */
 background-size: cover;
+transform-origin: center;
+transform:scale(1.5) translate(-6%, 15%);
+
 /* how to only use some of this pic? like a cropped/ zoomed in version? */
 
 }
