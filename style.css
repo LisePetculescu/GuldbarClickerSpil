@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+#screen {
+    /* make a grid with one field*/
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    /* make it follow the screen size */
+    aspect-ratio: 16 / 9;
+    width: 100%;
+   
+}
+#game {
+   grid-area: 1 / 1;
+   background-color: aqua;
+
+   overflow: hidden;
+
+   /* create another grid */
+   display: grid;
+    grid-template-columns: 10% / 10%;
+    grid-template-rows: 100%;
+}
+#game_background {
+grid-area: 1/1;
+background-image: url(images/bar.png);
+        /*--licens to pic <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> */
+background-size: cover;
+/* how to only use some of this pic? like a cropped/ zoomed in version? */
+
+}
+#game_elements {
+grid-area: 1 / 1;
+position: relative;
+overflow: hidden;
+}
+
+#beer_container {
+    width: 15%;
+    position: absolute;
+    top: 10%;
+    left: 1%;
+}
+#drink_container {
+    width: 9%;
+    position: absolute;
+    top: 10%;
+    left: 11%;
+}
+#shot_container {
+    width: 6%;
+    position: absolute;
+    top: 22%;
+    left: 19%;
+}
+#water_container {
+    width: 6%;
+    position: absolute;
+    top: 18%;
+    left: 25%;
+}
+#coffee_container {
+    width: 9%;
+    position: absolute;
+    top: 23%;
+    left: 31%;
+}
+/* #game_ui {
+
+}
+#start {
+
+}
+#game_over {
+
+}
+#level_complete {
+
+
+} */
+/* #game #start #game_over #level_complete {
+    position: absolute;
+} */
