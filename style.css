@@ -12,11 +12,13 @@ img {
     /* make it follow the screen size */
     aspect-ratio: 16 / 9;
     width: 100%;
+    /* height: auto; 
+    height too long in browser?? */
    
 }
 #game {
    grid-area: 1 / 1;
-   background-color: aqua;
+   background-color: rgb(191, 68, 228);
 
    overflow: hidden;
 
@@ -28,18 +30,19 @@ img {
 #game_background {
 grid-area: 1/1;
 background-image: url(images/bar.png);
-        /*--licens to pic <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> */
+/*--licens to pic <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> */
 background-size: cover;
 transform-origin: center;
 transform:scale(1.5) translate(-6%, 15%);
 
-/* how to only use some of this pic? like a cropped/ zoomed in version? */
+/* note to self: use transform to edit pic size/zoom/cropped/rotate */
 
 }
 #game_elements {
 grid-area: 1 / 1;
 position: relative;
 overflow: hidden;
+/* how to make my elements more visible compared to the background */
 }
 
 #beer_container {
@@ -47,30 +50,36 @@ overflow: hidden;
     position: absolute;
     top: 10%;
     left: 1%;
+    z-index: 2;
 }
 #drink_container {
     width: 9%;
     position: absolute;
     top: 10%;
     left: 11%;
+    z-index: 2;
+
 }
 #shot_container {
     width: 6%;
     position: absolute;
     top: 22%;
     left: 19%;
+    z-index: 10;
 }
 #water_container {
     width: 6%;
     position: absolute;
     top: 18%;
     left: 25%;
+    z-index: 2;
 }
 #coffee_container {
     width: 9%;
     position: absolute;
     top: 23%;
     left: 31%;
+    z-index: 1;
 }
 /* #game_ui {
 
@@ -88,3 +97,23 @@ overflow: hidden;
 /* #game #start #game_over #level_complete {
     position: absolute;
 } */
+
+/* TO-DO
+- Alle fire skærm-billeder: game, start,
+game_over og level_complete forventes at fylde #screen helt ud,
+og skal ligge ovenpå hinanden, så man kun kan se den øverste.
+
+- Giv #screen et grid med kun ét felt 
+og put alle de elementer der skal ligge ovenpå hinanden,
+ind i det felt.
+
+- #start, #game_over og #level_complete skal alle have en class hidden,
+der gør at de ikke bliver vist endnu.
+
+- Inde i #game_ui må du ikke bruge absolut positionering,
+men skal lave et grid-layout for hele brugerfladen 
+du får måske brug for flere grids inde i hinanden her. 
+Slå dig endelig løs ! Du må tilføje alt det HTML du har behov for inde i #game_ui 
+tænk på det som en helt almindelig side,
+der bare ligger “ovenpå” dit spil.
+ */
