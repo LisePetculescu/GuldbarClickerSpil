@@ -13,18 +13,15 @@ img {
   aspect-ratio: 16 / 9;
   width: 100%;
   /* height: auto; 
-    height too long in browser?? */
+    height too long in my browser?? */
 }
 #game {
   grid-area: 1 / 1;
   background-color: rgb(191, 68, 228);
-
   overflow: hidden;
 
   /* create another grid - but what does it do?*/
   display: grid;
-  grid-template-columns: 10% / 10%;
-  grid-template-rows: 100%;
 }
 #game_background {
   grid-area: 1/1;
@@ -34,7 +31,7 @@ img {
   transform-origin: center;
   transform: scale(1.5) translate(-6%, 15%);
 
-  /* note to self: use transform to edit pic size/zoom/cropped/rotate */
+  /* note to self: use transform to edit pic size/zoom/rotate */
 }
 #game_elements {
   grid-area: 1 / 1;
@@ -51,21 +48,7 @@ img {
   z-index: 2;
   filter: drop-shadow(0px 0px 10px yellow);
 }
-.beer_animation {
-  animation-name: falling;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-@keyframes falling {
-  0% {
-    transform: translate(0, -300%);
-  }
 
-  100% {
-    transform: translate(0, 300%);
-  }
-}
 #drink_container {
   width: 9%;
   position: absolute;
@@ -74,6 +57,7 @@ img {
   z-index: 2;
   filter: drop-shadow(0px 0px 10px red);
 }
+
 #shot_container {
   width: 6%;
   position: absolute;
@@ -99,27 +83,27 @@ img {
   filter: drop-shadow(0px 0px 10px red);
 }
 /* skal have 3 hjerter */
-#heart_container {
-  width: 9%;
+#heart_sprite {
+  width: 5%;
   position: absolute;
   top: 0%;
   right: 0%;
   z-index: 99;
   filter: drop-shadow(0px 0px 10px white);
 }
-#heart_container2 {
-  width: 9%;
+#heart_sprite2 {
+  width: 5%;
   position: absolute;
   top: 0%;
-  right: 8%;
+  right: 5%;
   z-index: 99;
   filter: drop-shadow(0px 0px 10px white);
 }
-#heart_container3 {
-  width: 9%;
+#heart_sprite3 {
+  width: 5%;
   position: absolute;
   top: 0%;
-  right: 16%;
+  right: 10%;
   z-index: 99;
   filter: drop-shadow(0px 0px 10px white);
 }
@@ -142,21 +126,11 @@ img {
   grid-area: 1 / 1;
   background-color: aqua;
 }
-/* #game #start #game_over #level_complete {
-    position: absolute;
-} */
+.hidden {
+  display: none;
+}
 
 /* TO-DO
-- Alle fire skærm-billeder: game, start,
-game_over og level_complete forventes at fylde #screen helt ud,
-og skal ligge ovenpå hinanden, så man kun kan se den øverste.
-
-- Giv #screen et grid med kun ét felt 
-og put alle de elementer der skal ligge ovenpå hinanden,
-ind i det felt.
-
-- #start, #game_over og #level_complete skal alle have en class hidden,
-der gør at de ikke bliver vist endnu.
 
 - Inde i #game_ui må du ikke bruge absolut positionering,
 men skal lave et grid-layout for hele brugerfladen 
