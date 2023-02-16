@@ -1,89 +1,96 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 img {
-    width: 100%;
+  width: 100%;
 }
 #screen {
-    /* make a grid with one field*/
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100%;
-    /* make it follow the screen size */
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    /* height: auto; 
+  /* make a grid with one field*/
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  /* make it follow the screen size */
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  /* height: auto; 
     height too long in browser?? */
-   
 }
 #game {
-   grid-area: 1 / 1;
-   background-color: rgb(191, 68, 228);
+  grid-area: 1 / 1;
+  background-color: rgb(191, 68, 228);
 
-   overflow: hidden;
+  overflow: hidden;
 
-   /* create another grid */
-   display: grid;
-    grid-template-columns: 10% / 10%;
-    grid-template-rows: 100%;
+  /* create another grid */
+  display: grid;
+  grid-template-columns: 10% / 10%;
+  grid-template-rows: 100%;
 }
 #game_background {
-grid-area: 1/1;
-background-image: url(images/bar.png);
-/*--licens to pic <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> */
-background-size: cover;
-transform-origin: center;
-transform:scale(1.5) translate(-6%, 15%);
+  grid-area: 1/1;
+  background-image: url(images/bar.png);
+  /*--licens to pic <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> */
+  background-size: cover;
+  transform-origin: center;
+  transform: scale(1.5) translate(-6%, 15%);
 
-/* note to self: use transform to edit pic size/zoom/cropped/rotate */
-
+  /* note to self: use transform to edit pic size/zoom/cropped/rotate */
 }
 #game_elements {
-grid-area: 1 / 1;
-position: relative;
-overflow: hidden;
-/* how to make my elements more visible compared to the background */
+  grid-area: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  /* how to make my elements more visible compared to the background */
 }
 
 #beer_container {
-    width: 15%;
-    position: absolute;
-    top: 10%;
-    left: 1%;
-    z-index: 2;
+  width: 15%;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  z-index: 2;
 }
 #drink_container {
-    width: 9%;
-    position: absolute;
-    top: 10%;
-    left: 11%;
-    z-index: 2;
-
+  width: 9%;
+  position: absolute;
+  top: 10%;
+  left: 11%;
+  z-index: 2;
 }
 #shot_container {
-    width: 6%;
-    position: absolute;
-    top: 22%;
-    left: 19%;
-    z-index: 10;
+  width: 6%;
+  position: absolute;
+  top: 22%;
+  left: 19%;
+  z-index: 10;
 }
 #water_container {
-    width: 6%;
-    position: absolute;
-    top: 18%;
-    left: 25%;
-    z-index: 2;
+  width: 6%;
+  position: absolute;
+  top: 18%;
+  left: 25%;
+  z-index: 2;
 }
 #coffee_container {
-    width: 9%;
-    position: absolute;
-    top: 23%;
-    left: 31%;
-    z-index: 1;
+  width: 9%;
+  position: absolute;
+  top: 23%;
+  left: 31%;
+  z-index: 1;
 }
-/* #game_ui {
+/* skal have 3 hjerter */
+#heart_container {
+  width: 9%;
+  position: absolute;
+  top: 8%;
+  left: 40%;
+  z-index: 99;
+}
 
-}
+/* #game_ui { 
+
+} */
+/*  
 #start {
 
 }
