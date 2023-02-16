@@ -117,14 +117,17 @@ img {
 #start {
   grid-area: 1 / 1;
   background-color: blue;
+  z-index: 999;
 }
 #game_over {
   grid-area: 1 / 1;
   background-color: rgb(123, 19, 221);
+  z-index: 999;
 }
 #level_complete {
   grid-area: 1 / 1;
   background-color: aqua;
+  z-index: 999;
 }
 .hidden {
   display: none;
