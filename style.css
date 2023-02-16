@@ -21,7 +21,7 @@ img {
 
   overflow: hidden;
 
-  /* create another grid */
+  /* create another grid - but what does it do?*/
   display: grid;
   grid-template-columns: 10% / 10%;
   grid-template-rows: 100%;
@@ -40,7 +40,7 @@ img {
   grid-area: 1 / 1;
   position: relative;
   overflow: hidden;
-  /* how to make my elements more visible compared to the background */
+  /* how to make my elements more visible compared to the background - shadow perhaps? */
 }
 
 #beer_container {
@@ -49,6 +49,22 @@ img {
   top: 10%;
   left: 1%;
   z-index: 2;
+  filter: drop-shadow(0px 0px 10px yellow);
+}
+.beer_animation {
+  animation-name: falling;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes falling {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 300%);
+  }
 }
 #drink_container {
   width: 9%;
@@ -56,6 +72,7 @@ img {
   top: 10%;
   left: 11%;
   z-index: 2;
+  filter: drop-shadow(0px 0px 10px red);
 }
 #shot_container {
   width: 6%;
@@ -63,6 +80,7 @@ img {
   top: 22%;
   left: 19%;
   z-index: 10;
+  filter: drop-shadow(0px 0px 10px red);
 }
 #water_container {
   width: 6%;
@@ -70,6 +88,7 @@ img {
   top: 18%;
   left: 25%;
   z-index: 2;
+  filter: drop-shadow(0px 0px 10px blue);
 }
 #coffee_container {
   width: 9%;
@@ -77,30 +96,52 @@ img {
   top: 23%;
   left: 31%;
   z-index: 1;
+  filter: drop-shadow(0px 0px 10px red);
 }
 /* skal have 3 hjerter */
 #heart_container {
   width: 9%;
   position: absolute;
-  top: 8%;
-  left: 40%;
+  top: 0%;
+  right: 0%;
   z-index: 99;
+  filter: drop-shadow(0px 0px 10px white);
+}
+#heart_container2 {
+  width: 9%;
+  position: absolute;
+  top: 0%;
+  right: 8%;
+  z-index: 99;
+  filter: drop-shadow(0px 0px 10px white);
+}
+#heart_container3 {
+  width: 9%;
+  position: absolute;
+  top: 0%;
+  right: 16%;
+  z-index: 99;
+  filter: drop-shadow(0px 0px 10px white);
 }
 
-/* #game_ui { 
+#game_ui {
+  grid-area: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
 
-} */
-/*  
 #start {
-
+  grid-area: 1 / 1;
+  background-color: blue;
 }
 #game_over {
-
+  grid-area: 1 / 1;
+  background-color: rgb(123, 19, 221);
 }
 #level_complete {
-
-
-} */
+  grid-area: 1 / 1;
+  background-color: aqua;
+}
 /* #game #start #game_over #level_complete {
     position: absolute;
 } */
