@@ -1,4 +1,185 @@
-.beer_animation {
+/* Animations */
+.falling {
+  animation-name: falling;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes falling {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 900%);
+  }
+}
+
+/* .paused {
+  animation-name: paused;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
+}
+
+@keyframes paused {
+  0% {
+    transform: translate(0, -300%);
+  }
+
+  100% {
+    transform: translate(0, 900%);
+  }
+} */
+
+.clickBad {
+  animation-name: clickBad;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  image-rendering: smooth;
+}
+
+@keyframes clickBad {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-10deg);
+  }
+
+  90% {
+    transform: scale(2) rotate(10deg);
+  }
+
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+.clickGood {
+  animation-name: clickGood;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  image-rendering: smooth;
+}
+
+@keyframes clickGood {
+  0% {
+    transform: scale(2) rotate(0deg);
+  }
+
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+
+
+/* alternativ
+  10% {
+       transform: scale(2) rotate(-360deg);
+     }
+  
+     100% {
+       transform: scale(1);
+     } */
+}
+
+.addLife {
+  animation-name: addLife;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes addLife {
+  0% {
+    transform: scale(0) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(2) rotate(90deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  75% {
+    transform: scale(2) rotate(270deg);
+  }
+
+  100% {
+    transform: scale(2) rotate(360deg);
+  }
+}
+
+.loseLife {
+  animation-name: loseLife;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loseLife {
+  0% {
+    transform: scale(2) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(2) rotate(90deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  75% {
+    transform: scale(2) rotate(270deg);
+  }
+
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+
+/* Beer animations */
+
+/* .beer_animation {
   animation-name: beer;
   animation-duration: 3s;
   animation-timing-function: linear;
@@ -10,11 +191,12 @@
   }
 
   100% {
-    transform: translate(0, 300%);
+    transform: translate(0, 900%);
   }
-}
+} */
 
-.drink_animation {
+/* Drink animations */
+/* .drink_animation {
   animation-name: drink;
   animation-duration: 3s;
   animation-timing-function: linear;
@@ -26,6 +208,63 @@
   }
 
   100% {
-    transform: translate(0, 400%);
+    transform: translate(0, 900%);
   }
+} */
+
+
+/* Shot animations */
+/* .shot_animation {
+  animation-name: shot;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+
+@keyframes shot {
+  0% {
+    transform: translate(0, -400%);
+  }
+
+  100% {
+    transform: translate(0, 900%);
+  }
+} */
+
+
+/* Water animations */
+/* .water_animation {
+  animation-name: water;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes water {
+  0% {
+    transform: translate(0, -400%);
+  }
+
+  100% {
+    transform: translate(0, 900%);
+  }
+} */
+
+
+/* Coffee animations */
+/* .coffee_animation {
+  animation-name: coffee;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes coffee {
+  0% {
+    transform: translate(0, -1600%);
+  }
+
+  100% {
+          transform: translate(0, 1600%);
+ }
+} */

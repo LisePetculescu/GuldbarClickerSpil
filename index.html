@@ -1,81 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guldbar spil</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animation.css" />
-  </head>
 
-  <body>
-    <div id="screen">
-      <div id="game">
-        <div id="game_background">
-          <!-- her skal ikke være noget -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guldbar spil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animation.css" />
+</head>
+
+<body>
+  <div id="screen">
+    <div id="game">
+      <div id="game_background">
+        <!-- her skal ikke være noget -->
+      </div>
+      <div id="game_elements">
+        <!-- Her indsætter jeg mine spil elementer -->
+        <!-- remember to check for license for shot, water, coffee -->
+        <div id="beer_container" class="beer_animation falling paused">
+          <img id="beer_sprite" class="clickBad" src="images/beer.png" alt="" />
+          <!-- remember licens i footer -->
+          <!-- <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> -->
         </div>
-        <div id="game_elements">
-          <!-- Her indsætter jeg mine spil elementer -->
-          <!-- remember to check for license for shot, water, coffee -->
-          <div id="beer_container" class="beer_animation">
-            <img id="beer_sprite" class="click" src="images/beer.png" alt="" />
-            <!-- remember licens i footer -->
-            <!-- <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> -->
-          </div>
-          <div id="drink_container" class="drink_animation">
-            <img
-              id="pinkDrink_sprite"
-              class="click"
-              src="images/pinkDrink.png"
-              alt=""
-            />
-            <!-- remember licens skal indsættes i footer element på siden-->
-            <!-- <a href="http://www.freepik.com">Designed by rawpixel.com / Freepik</a> -->
-          </div>
-          <div id="shot_container" class="shot_animation">
-            <img
-              id="shot_sprite"
-              class="click"
-              src="images/shotGlass.png"
-              alt=""
-            />
-            <!-- check for licens!!i footer -->
-          </div>
-          <div id="water_container" class="water_animation">
-            <img
-              id="water_sprite"
-              class="click"
-              src="images/water2.png"
-              alt=""
-            />
-            <!-- check for licens i footer-->
-          </div>
-          <div id="coffee_container" class="coffee_animation">
-            <img
-              id="coffee_sprite"
-              class="click"
-              src="images/coffee.png"
-              alt=""
-            />
-            <!-- check for licens i footer-->
-          </div>
+        <div id="drink_container" class="drink_animation falling paused">
+          <img id="pinkDrink_sprite" class="clickBad" src="images/pinkDrink.png" alt="" />
+          <!-- remember licens skal indsættes i footer element på siden-->
+          <!-- <a href="http://www.freepik.com">Designed by rawpixel.com / Freepik</a> -->
         </div>
+        <div id="shot_container" class="shot_animation falling paused">
+          <img id="shot_sprite" class="clickBad" src="images/shotGlass.png" alt="" />
+          <!-- check for licens!!i footer -->
+        </div>
+        <div id="water_container" class="water_animation falling paused">
+          <img id="water_sprite" class="clickGood" src="images/water2.png" alt="" />
+          <!-- check for licens i footer-->
+        </div>
+        <div id="coffee_container" class="coffee_animation falling paused">
+          <img id="coffee_sprite" class="clickGood" src="images/coffee.png" alt="" />
+          <!-- check for licens i footer-->
+        </div>
+      </div>
       <div id="game_ui">
         <!-- her laves liv, tid, points bar -->
         <div id="score_board"></div>
-        <div id="life_board" class="heart_container">
-          <!-- check licens og put i footer -->
-          <img id="heart_sprite" src="images/heart.png" alt="" />
-          <img id="heart_sprite2" src="images/heart.png" alt="" />
-          <img id="heart_sprite3" src="images/heart.png" alt="" />
+        <div id="life_board">
+          <div id="heart_container" class="paused">
+            <!-- check licens og put i footer -->
+            <img id="heart_sprite" class="addLife loseLife" src="images/heart.png" alt="" />
+            <img id="heart_sprite2" class="addLife loseLife" src="images/heart.png" alt="" />
+            <img id="heart_sprite3" class="addLife loseLife" src="images/heart.png" alt="" />
+          </div>
         </div>
         <div id="time_board"></div>
       </div>
-      </div>
-      <div id="start" class="hidden"></div>
-      <div id="game_over" class="hidden"></div>
-      <div id="level_complete" class="hidden"></div>
     </div>
-  </body>
+    <div id="start" class="hidden"></div>
+    <div id="game_over" class="hidden"></div>
+    <div id="level_complete" class="hidden"></div>
+  </div>
+</body>
+
 </html>

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow: hidden;
 }
 img {
   width: 100%;
@@ -12,32 +13,30 @@ img {
   /* make it follow the screen size */
   aspect-ratio: 16 / 9;
   width: 100%;
-  /* height: auto; 
-    height too long in my browser?? */
+
 }
 #game {
   grid-area: 1 / 1;
   background-color: rgb(191, 68, 228);
   overflow: hidden;
-
-  /* create another grid - but what does it do?*/
   display: grid;
 }
 #game_background {
-  grid-area: 1/1;
+  grid-area: 1 / 1;
   background-image: url(images/bar.png);
   /*--licens to pic <a href="http://www.freepik.com">Designed by vectorpocket / Freepik</a> */
   background-size: cover;
   transform-origin: center;
   transform: scale(1.5) translate(-6%, 15%);
-
   /* note to self: use transform to edit pic size/zoom/rotate */
+  /* background doesnt fit 16/9??? 
+  the bottom of the img disappears in fullscreeen */
 }
 #game_elements {
   grid-area: 1 / 1;
   position: relative;
   overflow: hidden;
-  /* how to make my elements more visible compared to the background - shadow perhaps? */
+
 }
 
 #beer_container {
