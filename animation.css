@@ -16,13 +16,13 @@
   }
 }
 
-/* .paused {
-  animation-name: paused;
+.paused {
+  /* animation-name: paused; */
   animation-play-state: paused;
-  animation-fill-mode: forwards;
+  /* animation-fill-mode: forwards; */
 }
 
-@keyframes paused {
+/* @keyframes paused {
   0% {
     transform: translate(0, -300%);
   }
