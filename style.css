@@ -13,7 +13,6 @@ img {
   /* make it follow the screen size */
   aspect-ratio: 16 / 9;
   width: 100%;
-
 }
 #game {
   grid-area: 1 / 1;
@@ -36,7 +35,6 @@ img {
   grid-area: 1 / 1;
   position: relative;
   overflow: hidden;
-
 }
 
 #beer_container {
