@@ -335,10 +335,10 @@ function displayPlusLife() {
 
 // End of game
 
-function levelComplete() {
+function level_complete() {
   console.log("You win!");
 }
 
-function gameOver() {
+function game_over() {
   console.log("You lose :'(");
 }
