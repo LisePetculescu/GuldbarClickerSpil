@@ -84,8 +84,16 @@ img {
   background-color: red;
 }
 
-#level-complete {
+#level_complete {
   background-color: green;
+}
+
+#start_screen {
+  background-color: rgb(219, 16, 158);
+}
+
+.hidden {
+  display: none;
 }
 
 /* skal have 3 hjerter */

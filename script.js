@@ -1,7 +1,7 @@
 "use-strict";
 console.log("hello JS");
 
-window.addEventListener("load", start);
+window.addEventListener("load", gameStart);
 
 let points = 0;
 let lives = 0;
@@ -9,6 +9,17 @@ let lives = 0;
 
 function start() {
   console.log("start is starting");
+
+  // lav en start skærm med en start knap (og regler?)
+  //   fjern hidden class på start_screen
+  //   document.querySelector("#start_screen").classList.remove("hidden");
+  // lav en start over button på level_complete og game_over
+}
+
+function gameStart() {
+  console.log("game is starting");
+
+  //   add falling class to elements instead of in html
 
   points = 0;
   lives = 3;
@@ -305,12 +316,12 @@ function displayPoints() {
 function minusLife() {
   console.log("you lost a life");
 
-  // removing the life
-  console.log("you have " + lives + " lives left");
-
   //calling the displayMinusLife function
   displayMinusLife();
+
+  // removing the life
   lives--;
+  console.log("you have " + lives + " lives left");
 }
 
 function displayMinusLife() {
